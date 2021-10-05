@@ -1,57 +1,91 @@
-* { border: 1px solid limegreen; }
+/* * { border: 1px solid limegreen; } */
+
+@import url('https://fonts.googleapis.com/css2?family=Akronim&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Stick+No+Bills:wght@300;400&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Merienda&display=swap');
+
 body{
-  background-color: #F0FFFF;
+  background-color: #696969;
 }
 
 h1{
+  font-size: 50px;
+  font-family: 'Merienda', cursive;
+  /* font-family: 'Stick No Bills', sans-serif; */
+  /* font-family: 'Akronim', cursive; */
+  color:red;
   text-align: center;
+}
+
+#container{
+  margin: 0 auto;
+  width:580px;
+  height:605px;
+  background-image: url("../images/galaxy-wallpaper.jpeg");
 }
 
 #header{
   margin: 0 auto;
   text-align: center;
-  width: 980px;
+  width: 580px;
 }
 
 #main-box{
+  background-position: center;
+  background-repeat: no-repeat;
+
+  /* background-color: red; */
   text-align: center;
-  width 980px;
-  height: 400px;
+  width: 580px;
+  height: 500px;
+  margin: 0 auto;
 }
 
 #box1, #box2, #box3, #box4, #box5,
 #box6, #box7, #box8, #box9{
   text-align: center;
   margin: 0 auto;
-  width: 80px;
-  height: 80px;
+  width: 90px;
+  height: 90px;
   border: 1px solid gray;
   border-radius: 10px;
-  font-size: 25px;
+  font-size: 80px;
   cursor: pointer;
-  background-color: #F8F8FF;
+  color: red;
+  /* background-color: #F8F8FF; */
+  font-family: 'Akronim', cursive;
 }
 
 #result{
-  color:red;
+  font-family: 'Stick No Bills', sans-serif;
+  color: #00FFFF;
   margin: 0 auto;
   text-align: center;
-  width: 600px;
+  width: 580px;
   height: 100px;
   line-height: 2em;
-  font-size: 40px;
+  font-size: 60px;
 }
 
 #restart{
-  color: limegreen;
-  font-size: 20px;
-  width: 200px;
-  height: 80px;
+  font-family: 'Stick No Bills', sans-serif;
+  margin-top: 20px;
+  color: #FF1493;
+  font-size: 40px;
+  width: 300px;
+  height: 100px;
   line-height: 1em;
 }
 
+restart:hover{
+  color:blue;
+}
+
 #turn{
+  font-family: 'Stick No Bills', sans-serif;
   text-align: center;
-  font-size: 40px;
+  font-size: 60px;
   color: red;
 }
