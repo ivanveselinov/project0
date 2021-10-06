@@ -1,5 +1,11 @@
 $(document).ready(function(){
 
+
+  let player1Score = 0;
+  let player2Score = 0;
+  let tieScore = 0;
+
+
 const main = function(){
 console.log(`MAIN FUNCTION STARTED`);
 let b1 = $(`#box1`).val();
@@ -18,30 +24,47 @@ const disableBox = function(){
   console.log(`this is disabled`);
 }
 
+
 ///////////////////////////////// X CONDITION //////////////////////////////////////////////////
   if ( b1 === `X` && b2 === `X` &&  b3 === `X`){
   result.text(`Player One Won Game`);
+  player1Score= player1Score + 1;
+  $(`.p1`).html( player1Score );
   disableBox();
 }else if ( b4 === `X` && b5 === `X` && b6 ===`X` ){
   result.text(`Player One Won Game`);
+  player1Score= player1Score + 1;
+  $(`.p1`).html( player1Score );
     disableBox();
 }else if ( b7 === `X` && b8 === `X` && b9 ===`X` ){
   result.text(`Player One Won Game`);
+  player1Score= player1Score + 1;
+  $(`.p1`).html( player1Score );
   disableBox();
 }else if ( b1 === `X` && b4 === `X` && b7 ===`X`){
   result.text(`Player One Won Game`);
+  player1Score= player1Score + 1;
+  $(`.p1`).html( player1Score );
     disableBox();
 }else if ( b2 === `X` && b5 === `X` && b8 ===`X` ){
   result.text(`Player One Won Game`);
+  player1Score= player1Score + 1;
+  $(`.p1`).html( player1Score );
     disableBox();
 }else if ( b3 === `X` && b6 === `X` && b9 ===`X` ){
   result.text(`Player One Won Game`);
-    disableBox();  disableBox();
+  player1Score= player1Score + 1;
+  $(`.p1`).html( player1Score );
+    disableBox();
 }else if ( b1 === `X` && b5 === `X` && b9 ===`X` ){
   result.text(`Player One Won Game`);
+  player1Score= player1Score + 1;
+  $(`.p1`).html( player1Score );
     disableBox();
 }else if ( b3 === `X` && b5 === `X` && b7 ===`X` ){
-  result.text(`Player One Won Game`);
+  result.text(` Player One Won Game `);
+  player1Score= player1Score + 1;
+  $(`.p1`).html( player1Score );
     disableBox();
 }
 
@@ -50,27 +73,43 @@ const disableBox = function(){
 
 if ( b1 === `O` && b2 === `O` && b3 ===`O` ){
   result.text(`Player Two Won Game`);
+  player2Score= player2Score + 1;
+  $(`.p2`).html( player2Score );
     disableBox();
 }else if ( b4 === `O` && b5 === `O` && b6 ===`O` ){
   result.text(`Player Two Won Game`);
+  player2Score= player2Score + 1;
+  $(`.p2`).html( player2Score );
     disableBox();
 }else if ( b7 === `O` && b8 === `O` && b9 ===`O` ){
   result.text(`Player Two Won Game`);
+  player2Score= player2Score + 1;
+  $(`.p2`).html( player2Score );
     disableBox();
 }else if ( b1 === `O` && b4 === `O` && b7 ===`O` ){
   result.text(`Player Two Won Game`);
+  player2Score= player2Score + 1;
+  $(`.p2`).html( player2Score );
     disableBox();
 }else if ( b2 === `O` && b5 === `O` && b8 ===`O` ){
   result.text(`Player Two Won Game`);
+  player2Score= player2Score + 1;
+  $(`.p2`).html( player2Score );
     disableBox();
 }else if ( b3 === `O` && b6 === `O` && b9 ===`O` ){
   result.text(`Player Two Won Game`);
+  player2Score= player2Score + 1;
+  $(`.p2`).html( player2Score );
     disableBox();
 }else if ( b1 === `O` && b5 === `O` && b9 ===`O` ){
   result.text(`Player Two Won Game`);
+  player2Score= player2Score + 1;
+  $(`.p2`).html( player2Score );
     disableBox();
 }else if ( b3 === `O` && b5 === `O` && b7 ===`O` ){
   result.text(`Player Two Won Game`);
+  player2Score= player2Score + 1;
+  $(`.p2`).html( player2Score );
     disableBox();
 
 ////////////////////////////////// TIE GAME ////////////////////////////////////////////////////////////////////////
@@ -80,6 +119,8 @@ if ( b1 === `O` && b2 === `O` && b3 ===`O` ){
           && (b6 ===  `X` || b6 ===`O`) && (b7 ===  `X` || b7 ===`O`)
           && (b8 ===  `X` || b8 ===`O`) && (b9 ===  `X` || b9 ===`O`) ){
   result.text(`WOOT!! Its a Tie Game`);
+  tieScore = tieScore + 1;
+  $(`.p3`).html( tieScore );
     disableBox();
 
 }else if( players.counter == 1 ){
@@ -142,6 +183,5 @@ $(`#box7`).on(`click`, boxClick);
 $(`#box8`).on(`click`, boxClick);
 $(`#box9`).on(`click`, boxClick);
 
-//////////////// OTHER WAY WORKING TOO !! //////////////////////////////////////
 
 });// END OF PROGRAM

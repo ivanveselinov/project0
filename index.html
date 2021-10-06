@@ -9,11 +9,17 @@
   </head>
   <body>
 <h1>Welcome to Tic-Tac-Toe Game</h1>
-<div id="container">
+<div id="all-container">  <!--  MAIN CONTAINER --->
+    <div id="score"> <!-- RIGHT CONTAINER SHOWING SCORE--->
+      <p class="players">Player One score: <span class="p1">0</span></p>
+      <p class="players">Player Two score: <span class="p2">0</span></p>
+      <p class="players">Tie score: <span class="p3">0</span></p>
+    </div>
+<div id="container">  <!-- MIDDLE CONTAINER WITH CONTENT--->
 <div id="header">
-  <div id="result"></div>
+<div id="result"></div> <!-- RESULT DISPLEY --->
 </div>
-<div id="main-box">
+<div id="main-box"> <!-- UNDER DISPLAY ALL BOXEX GOING INSIDE--->
 <button id="restart" type="button">Restart Game</button>
 <br><br> <!-- 3x3 box must be done like this --->
 <input type="text" id="box1">
@@ -30,7 +36,9 @@
 <br><br> <!-- 3x3 box must be done like this --->
 </div>
 </div>
-<p id="turn"></p>
+<div id="left-empty"></div> <!-- EMPTY LEFT CONTAINER--->
+</div>
 
+<p id="turn"></p>
   </body>
 </html>
