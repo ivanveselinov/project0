@@ -3,11 +3,12 @@
 ## TIC TAC TOE
 
 This project is made for **learning purposes**.
-This game planned for two people who want to try some old school game from our childhood.
+This game is created for two players who want to try some old school games from our childhood.
 
 ## Technologies
 
 For this project we used this Technologies :
+
 * HTML
 * CSS
 * JavaScript
@@ -24,15 +25,18 @@ This game is working on :
 This game is a responsive game so you can run it on every device
 starting from screen that supports **200px** resolution till **Max**.
 
-officially launched on **08.10.2021**.
+Officially launched on **07.10.2021**.
 
 You can access the game by pressing
 this link : [Tic Tac Toe](https://ivanveselinov.github.io/project0/)
 
+## Future improvements
+
+* My next goal is to make this game a **single player** ( Player vs Computer ).
 
 
 ## Special thanks
-Special thanks to my **teachers** for support and knowledge they give it to me! :)
+Special thanks to my **teachers and mentors** for the support and knowledge they gave to me! :)
 * Joel
 * Pat
 * Rowena

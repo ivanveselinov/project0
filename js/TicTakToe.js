@@ -4,6 +4,11 @@ $(`#all-container`).hide().fadeIn(1000);
   let player2Score = 0;
   let tieScore = 0;
 
+let audio = function(){         // Define audio
+  let play = new Audio(`voice/bip.wav`);
+  play.play();
+}
+
 
 const main = function(){
 console.log(`MAIN FUNCTION STARTED`);
@@ -145,9 +150,7 @@ $(`#restart`).on(`click`, function(){
   let b9 = $(`#box9`).val("");
   let result = $(`#result`).text("");
   let turn = $(`#turn`).html("");
-  // fadeOut(1000);
-  // $(`#main-box`).delay(500).fadeIn(1000);
-
+  audio();
 });
 
 /////////////////////////////DEFINE PLAYERS/////////////////////////////////////
@@ -171,6 +174,7 @@ const boxClick = function(){
     $(`#${this.id}`).prop(`disabled`, true);
     players.counter = 1;
   }
+  audio();
   main();
 }
 

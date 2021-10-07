@@ -81,6 +81,7 @@ h1{
   cursor: pointer;
   color: red;
   font-family: 'Akronim', cursive;
+
 }
 
 #result{
@@ -132,6 +133,7 @@ span{
 /* #all-container{
   flex-wrap: wrap;
 } */
+
 @media(max-width : 650px){
   body{
       background-color:black;
