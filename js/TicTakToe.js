@@ -1,6 +1,5 @@
 $(document).ready(function(){
-
-
+$(`#all-container`).hide().fadeIn(1000);
   let player1Score = 0;
   let player2Score = 0;
   let tieScore = 0;
@@ -146,6 +145,9 @@ $(`#restart`).on(`click`, function(){
   let b9 = $(`#box9`).val("");
   let result = $(`#result`).text("");
   let turn = $(`#turn`).html("");
+  // fadeOut(1000);
+  // $(`#main-box`).delay(500).fadeIn(1000);
+
 });
 
 /////////////////////////////DEFINE PLAYERS/////////////////////////////////////
@@ -162,11 +164,11 @@ const boxClick = function(){
   if( players.counter == 1 ){
     console.log(players.counter);
     $(`#${this.id}`).val(players.playerX);
-    $(`#${this.id}`).disabled = true;
+    $(`#${this.id}`).prop(`disabled`, true);
     players.counter = 0;
   }else{
     $(`#${this.id}`).val(players.playerO);
-    $(`#${this.id}`).disabled = true;
+    $(`#${this.id}`).prop(`disabled`, true);
     players.counter = 1;
   }
   main();
