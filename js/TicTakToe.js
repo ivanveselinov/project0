@@ -9,6 +9,16 @@ let audio = function(){         // Define audio
   play.play();
 }
 
+let win = function(){
+  let win = new Audio(`voice/win.wav`);
+  win.play();
+}
+
+let lose = function(){
+  let lose = new Audio(`voice/lose.wav`);
+  lose.play();
+}
+
 
 const main = function(){
 console.log(`MAIN FUNCTION STARTED`);
@@ -22,7 +32,6 @@ let b7 = $(`#box7`).val();
 let b8 = $(`#box8`).val();
 let b9 = $(`#box9`).val();
 let result = $(`#result`);
-
 const disableBox = function(){
   $("input").prop('disabled', true); /// disable the input  ///
   console.log(`this is disabled`);
@@ -35,44 +44,50 @@ const disableBox = function(){
   player1Score= player1Score + 1;
   $(`.p1`).html( player1Score );
   disableBox();
+  win();
 }else if ( b4 === `X` && b5 === `X` && b6 ===`X` ){
   result.text(`Player One Won Game`);
   player1Score= player1Score + 1;
   $(`.p1`).html( player1Score );
     disableBox();
+    win();
 }else if ( b7 === `X` && b8 === `X` && b9 ===`X` ){
   result.text(`Player One Won Game`);
   player1Score= player1Score + 1;
   $(`.p1`).html( player1Score );
   disableBox();
+  win();
 }else if ( b1 === `X` && b4 === `X` && b7 ===`X`){
   result.text(`Player One Won Game`);
   player1Score= player1Score + 1;
   $(`.p1`).html( player1Score );
     disableBox();
+    win();
 }else if ( b2 === `X` && b5 === `X` && b8 ===`X` ){
   result.text(`Player One Won Game`);
   player1Score= player1Score + 1;
   $(`.p1`).html( player1Score );
     disableBox();
+    win();
 }else if ( b3 === `X` && b6 === `X` && b9 ===`X` ){
   result.text(`Player One Won Game`);
   player1Score= player1Score + 1;
   $(`.p1`).html( player1Score );
     disableBox();
+    win();
 }else if ( b1 === `X` && b5 === `X` && b9 ===`X` ){
   result.text(`Player One Won Game`);
   player1Score= player1Score + 1;
   $(`.p1`).html( player1Score );
     disableBox();
+    win();
 }else if ( b3 === `X` && b5 === `X` && b7 ===`X` ){
   result.text(` Player One Won Game `);
   player1Score= player1Score + 1;
   $(`.p1`).html( player1Score );
     disableBox();
+    win();
 }
-
-
 ///////////////////////////////// O CONDITION ///////////////////////////////////////////////
 
 if ( b1 === `O` && b2 === `O` && b3 ===`O` ){
@@ -80,42 +95,49 @@ if ( b1 === `O` && b2 === `O` && b3 ===`O` ){
   player2Score= player2Score + 1;
   $(`.p2`).html( player2Score );
     disableBox();
+    win();
 }else if ( b4 === `O` && b5 === `O` && b6 ===`O` ){
   result.text(`Player Two Won Game`);
   player2Score= player2Score + 1;
   $(`.p2`).html( player2Score );
     disableBox();
+    win();
 }else if ( b7 === `O` && b8 === `O` && b9 ===`O` ){
   result.text(`Player Two Won Game`);
   player2Score= player2Score + 1;
   $(`.p2`).html( player2Score );
     disableBox();
+    win();
 }else if ( b1 === `O` && b4 === `O` && b7 ===`O` ){
   result.text(`Player Two Won Game`);
   player2Score= player2Score + 1;
   $(`.p2`).html( player2Score );
     disableBox();
+    win();
 }else if ( b2 === `O` && b5 === `O` && b8 ===`O` ){
   result.text(`Player Two Won Game`);
   player2Score= player2Score + 1;
   $(`.p2`).html( player2Score );
     disableBox();
+    win();
 }else if ( b3 === `O` && b6 === `O` && b9 ===`O` ){
   result.text(`Player Two Won Game`);
   player2Score= player2Score + 1;
   $(`.p2`).html( player2Score );
     disableBox();
+    win();
 }else if ( b1 === `O` && b5 === `O` && b9 ===`O` ){
   result.text(`Player Two Won Game`);
   player2Score= player2Score + 1;
   $(`.p2`).html( player2Score );
     disableBox();
+    win();
 }else if ( b3 === `O` && b5 === `O` && b7 ===`O` ){
   result.text(`Player Two Won Game`);
   player2Score= player2Score + 1;
   $(`.p2`).html( player2Score );
     disableBox();
-
+    win();
 ////////////////////////////////// TIE GAME ////////////////////////////////////////////////////////////////////////
 
 }else if( (b1 ===  `X` || b1 ===`O`) && (b2 ===  `X` || b2 ===`O`) && (b3 ===  `X` || b3 ===`O`)
@@ -126,6 +148,7 @@ if ( b1 === `O` && b2 === `O` && b3 ===`O` ){
   tieScore = tieScore + 1;
   $(`.p3`).html( tieScore );
     disableBox();
+    lose();
 
 }else if( players.counter == 1 ){
   $(`#turn`).html(`Player X turn`);
@@ -169,7 +192,7 @@ const boxClick = function(){
     $(`#${this.id}`).val(players.playerX);
     $(`#${this.id}`).prop(`disabled`, true);
     players.counter = 0;
-  }else{
+}else{
     $(`#${this.id}`).val(players.playerO);
     $(`#${this.id}`).prop(`disabled`, true);
     players.counter = 1;
