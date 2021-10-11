@@ -15,8 +15,6 @@ body{
 h1{
   font-size: 50px;
   font-family: 'Merienda', cursive;
-  /* font-family: 'Stick No Bills', sans-serif; */
-  /* font-family: 'Akronim', cursive; */
   color:red;
   text-align: center;
 }
@@ -91,12 +89,9 @@ h1{
   color:yellow;
 }
 
-
-#win-lose-image{
-background-image: url("../images/win.gif");
-/* $(`#win-lose-image`).hide().fadeIn(3000); */
+.win-color{
+background-color: yellow;
 }
-
 
 #result{
   font-family: 'Stick No Bills', sans-serif;
@@ -147,7 +142,6 @@ span{
 .players{
   color: #FF1493;
 }
-
 
 @media(max-width : 650px){
   body{

@@ -40,48 +40,56 @@ const disableBox = function(){
 
 ///////////////////////////////// X CONDITION //////////////////////////////////////////////////
   if ( b1 === `X` && b2 === `X` &&  b3 === `X`){
+   $(`#box1, #box2, #box3`).addClass(`win-color`);
   result.text(`Player One Won Game`);
   player1Score= player1Score + 1;
   $(`.p1`).html( player1Score );
   disableBox();
   win();
 }else if ( b4 === `X` && b5 === `X` && b6 ===`X` ){
+  $(`#box4, #box5, #box6`).addClass(`win-color`);
   result.text(`Player One Won Game`);
   player1Score= player1Score + 1;
   $(`.p1`).html( player1Score );
     disableBox();
     win();
 }else if ( b7 === `X` && b8 === `X` && b9 ===`X` ){
+  $(`#box7, #box8, #box9`).addClass(`win-color`);
   result.text(`Player One Won Game`);
   player1Score= player1Score + 1;
   $(`.p1`).html( player1Score );
   disableBox();
   win();
 }else if ( b1 === `X` && b4 === `X` && b7 ===`X`){
+  $(`#box1, #box4, #box7`).addClass(`win-color`);
   result.text(`Player One Won Game`);
   player1Score= player1Score + 1;
   $(`.p1`).html( player1Score );
     disableBox();
     win();
 }else if ( b2 === `X` && b5 === `X` && b8 ===`X` ){
+  $(`#box2, #box5, #box8`).addClass(`win-color`);
   result.text(`Player One Won Game`);
   player1Score= player1Score + 1;
   $(`.p1`).html( player1Score );
     disableBox();
     win();
 }else if ( b3 === `X` && b6 === `X` && b9 ===`X` ){
+  $(`#box3, #box6, #box9`).addClass(`win-color`);
   result.text(`Player One Won Game`);
   player1Score= player1Score + 1;
   $(`.p1`).html( player1Score );
     disableBox();
     win();
 }else if ( b1 === `X` && b5 === `X` && b9 ===`X` ){
+  $(`#box1, #box5, #box9`).addClass(`win-color`);
   result.text(`Player One Won Game`);
   player1Score= player1Score + 1;
   $(`.p1`).html( player1Score );
     disableBox();
     win();
 }else if ( b3 === `X` && b5 === `X` && b7 ===`X` ){
+  $(`#box3, #box5, #box7`).addClass(`win-color`);
   result.text(` Player One Won Game `);
   player1Score= player1Score + 1;
   $(`.p1`).html( player1Score );
@@ -91,48 +99,56 @@ const disableBox = function(){
 ///////////////////////////////// O CONDITION ///////////////////////////////////////////////
 
 if ( b1 === `O` && b2 === `O` && b3 ===`O` ){
+  $(`#box1, #box2, #box3`).addClass(`win-color`);
   result.text(`Player Two Won Game`);
   player2Score= player2Score + 1;
   $(`.p2`).html( player2Score );
     disableBox();
     win();
 }else if ( b4 === `O` && b5 === `O` && b6 ===`O` ){
+  $(`#box4, #box5, #box6`).addClass(`win-color`);
   result.text(`Player Two Won Game`);
   player2Score= player2Score + 1;
   $(`.p2`).html( player2Score );
     disableBox();
     win();
 }else if ( b7 === `O` && b8 === `O` && b9 ===`O` ){
+  $(`#box7, #box8, #box9`).addClass(`win-color`);
   result.text(`Player Two Won Game`);
   player2Score= player2Score + 1;
   $(`.p2`).html( player2Score );
     disableBox();
     win();
 }else if ( b1 === `O` && b4 === `O` && b7 ===`O` ){
+  $(`#box1, #box4, #box7`).addClass(`win-color`);
   result.text(`Player Two Won Game`);
   player2Score= player2Score + 1;
   $(`.p2`).html( player2Score );
     disableBox();
     win();
 }else if ( b2 === `O` && b5 === `O` && b8 ===`O` ){
+  $(`#box2, #box5, #box8`).addClass(`win-color`);
   result.text(`Player Two Won Game`);
   player2Score= player2Score + 1;
   $(`.p2`).html( player2Score );
     disableBox();
     win();
 }else if ( b3 === `O` && b6 === `O` && b9 ===`O` ){
+  $(`#box3, #box6, #box9`).addClass(`win-color`);
   result.text(`Player Two Won Game`);
   player2Score= player2Score + 1;
   $(`.p2`).html( player2Score );
     disableBox();
     win();
 }else if ( b1 === `O` && b5 === `O` && b9 ===`O` ){
+  $(`#box1, #box5, #box9`).addClass(`win-color`);
   result.text(`Player Two Won Game`);
   player2Score= player2Score + 1;
   $(`.p2`).html( player2Score );
     disableBox();
     win();
 }else if ( b3 === `O` && b5 === `O` && b7 ===`O` ){
+  $(`#box3, #box5, #box7`).addClass(`win-color`);
   result.text(`Player Two Won Game`);
   player2Score= player2Score + 1;
   $(`.p2`).html( player2Score );
@@ -173,6 +189,8 @@ $(`#restart`).on(`click`, function(){
   let b9 = $(`#box9`).val("");
   let result = $(`#result`).text("");
   let turn = $(`#turn`).html("");
+  $(`#box1, #box2, #box3, #box4, #box5,
+  #box6, #box7, #box8, #box9`).removeClass(`win-color`);
   audio();
 });
 
